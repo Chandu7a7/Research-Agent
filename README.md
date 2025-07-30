@@ -1,5 +1,7 @@
 # Research Agent AI
-https://github.com/Chandu7a7/Research-Agent/blob/main/Project%20Dashboard.png
+
+![Project Dashboard](https://github.com/Chandu7a7/Research-Agent/blob/main/Project%20Dashboard.png)
+
 A comprehensive AI-powered research assistant built with React, Node.js, and IBM Granite AI. This application helps researchers discover, analyze, and synthesize academic literature with advanced AI capabilities.
 
 ## Features
