@@ -58,8 +58,8 @@ A comprehensive AI-powered research assistant built with React, Node.js, and IBM
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
-   cd research-agent-ai
+   git clone https://github.com/Chandu7a7/Research-Agent.git
+   cd Research-Agent
    ```
 
 2. **Install dependencies**
@@ -69,7 +69,7 @@ A comprehensive AI-powered research assistant built with React, Node.js, and IBM
 
 3. **Environment Configuration**
    ```bash
-   cp .env.example .env
+   cp .env
    ```
    
    Fill in your IBM Cloud credentials:
