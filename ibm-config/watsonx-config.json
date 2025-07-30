@@ -1,0 +1,48 @@
+{
+  "name": "research-agent-watsonx-config",
+  "description": "Configuration for IBM Watsonx.ai integration",
+  "version": "1.0.0",
+  "services": {
+    "watsonx": {
+      "url": "https://us-south.ml.cloud.ibm.com",
+      "model": "ibm/granite-13b-chat-v2",
+      "parameters": {
+        "max_new_tokens": 1000,
+        "temperature": 0.3,
+        "top_p": 0.9,
+        "top_k": 50,
+        "repetition_penalty": 1.1
+      }
+    },
+    "granite": {
+      "models": {
+        "summarization": "ibm/granite-13b-instruct-v2",
+        "hypothesis_generation": "ibm/granite-20b-code-instruct",
+        "text_analysis": "ibm/granite-13b-chat-v2"
+      }
+    }
+  },
+  "prompts": {
+    "summarization": {
+      "system": "You are a research assistant specialized in academic paper summarization. Provide concise, accurate summaries that capture the key findings and methodology.",
+      "user_template": "Please summarize the following research paper abstract in 2-3 sentences, highlighting the main findings and methodology:\n\n{text}"
+    },
+    "hypothesis_generation": {
+      "system": "You are a research scientist who generates testable hypotheses based on research topics and existing literature.",
+      "user_template": "Based on the research topic '{topic}' and context '{context}', generate 2-3 testable research hypotheses. For each hypothesis, provide the statement, rationale, and key variables to test."
+    },
+    "research_questions": {
+      "system": "You are an expert researcher who formulates meaningful research questions.",
+      "user_template": "Generate 4-5 research questions for the topic '{topic}' that would advance the field and are feasible to investigate."
+    }
+  },
+  "integration": {
+    "timeout": 30000,
+    "retry_attempts": 3,
+    "batch_size": 10,
+    "rate_limit": {
+      "requests_per_minute": 60,
+      "tokens_per_minute": 50000
+    }
+  }
+}
